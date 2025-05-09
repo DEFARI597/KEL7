@@ -1,0 +1,93 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Segoe UI", sans-serif;
+}
+
+.signup-container {
+  display: flex;
+  height: 100vh;
+  background: url("./img/background.jpg") no-repeat center center fixed;
+  background-size: cover;
+  color: white;
+}
+
+.left-panel {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.icon {
+  width: 390px;
+  height: 380px;
+}
+
+.right-panel {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 0 60px;
+  background-color: rgba(0, 0, 0, 0.6);
+}
+
+.right-panel h1 {
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+
+.right-panel p {
+  margin-bottom: 20px;
+  color: #ccc;
+}
+
+form input {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 15px;
+  border: none;
+  border-radius: 4px;
+}
+
+.password-field {
+  position: relative;
+}
+
+.password-field input {
+  padding-right: 40px;
+}
+
+.toggle-password {
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  cursor: pointer;
+  user-select: none;
+}
+
+button {
+  width: 100%;
+  padding: 12px;
+  background-color: #1e5cc0;
+  border: none;
+  border-radius: 4px;
+  color: white;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+.signin-text {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.signin-text a {
+  color: #5da0f2;
+  text-decoration: none;
+}
