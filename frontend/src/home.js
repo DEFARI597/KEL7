@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import "./HomePage.css";
-import { Link, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 // Banner Component
 const Banner = ({ currentImage, images, onPrev, onNext, onDotClick }) => (
@@ -69,13 +69,13 @@ const Header = () => {
       <div className="left-section">
         <div className="nav-menu">
           <img src="./img/icon2.png" alt="Cineblue" className="icon2" />
-          <Link to={"/movies"} className="movies">
+          <a href="./movies" className="nav-link">
             Movies
-          </Link>
+          </a>
           <a href="/cinema" className="nav-link">
             Cinema
           </a>
-          <a href="/fnb" className="nav-link">
+          <a href="/food" className="nav-link">
             F&B
           </a>
           <a href="/news" className="nav-link">
@@ -85,7 +85,7 @@ const Header = () => {
       </div>
 
       <div className="center-section">
-        <div className="search-box">
+        <div className="search-box1">
           <input type="text" placeholder="Search movies or theater.." />
           <button>🔍</button>
         </div>
@@ -132,14 +132,54 @@ const MovieSection = () => (
 );
 
 // Movie Carousel Component
-const MovieCarousel = () => (
-  <div className="carousel">
-    <img src="./img/it.jpg" alt="IT" />
-    <img src="./img/lalaland.jpg" alt="La La Land" />
-    <img src="./img/marnie.jpg" alt="When Marnie Was There" />
-    <img src="./img/miracle.jpg" alt="Miracle in Cell No 7" />
-  </div>
-);
+const MovieCarousel = () => {
+  const navigate = useNavigate();
+
+  const handleMovieClick = (movieId) => {
+    navigate(`/movie/${movieId}`);
+  };
+
+  return (
+    <div className="carousel">
+      <img
+        src="./img/miku.jpg"
+        alt="Hatsune Miku"
+        onClick={() => handleMovieClick("miku")}
+        style={{ cursor: "pointer" }}
+      />
+      <img
+        src="./img/it.jpg"
+        alt="IT"
+        onClick={() => handleMovieClick("it")}
+        style={{ cursor: "pointer" }}
+      />
+      <img
+        src="./img/lalaland.jpg"
+        alt="La La Land"
+        onClick={() => handleMovieClick("lalaland")}
+        style={{ cursor: "pointer" }}
+      />
+      <img
+        src="./img/marnie.jpg"
+        alt="When Marnie Was There"
+        onClick={() => handleMovieClick("marnie")}
+        style={{ cursor: "pointer" }}
+      />
+      <img
+        src="./img/miracle.jpg"
+        alt="Miracle in Cell No 7"
+        onClick={() => handleMovieClick("miracle")}
+        style={{ cursor: "pointer" }}
+      />
+      <img
+        src="./img/fd.jpg"
+        alt="Final Destination"
+        onClick={() => handleMovieClick("fd")}
+        style={{ cursor: "pointer" }}
+      />
+    </div>
+  );
+};
 
 // Footer Component
 const Footer = () => (

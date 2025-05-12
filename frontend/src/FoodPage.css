@@ -1,0 +1,178 @@
+body {
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    background: #fff;
+}
+
+.header {
+    background: linear-gradient(to right,
+            #008eff,
+            #00204e,
+            #00204e,
+            #00204e,
+            #00204e,
+            #00204e,
+            #00204e,
+            #008eff,
+        );
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    color: white;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.logo .blue {
+    color: #b0d4ff;
+}
+
+.nav a {
+    margin: 0 10px;
+    color: white;
+    text-decoration: none;
+}
+
+.actions input {
+    padding: 5px;
+    margin-right: 10px;
+}
+
+.actions button {
+    background: #3366ff;
+    color: white;
+    border: none;
+    padding: 6px 10px;
+    cursor: pointer;
+}
+
+.location {
+    padding: 20px;
+    background: #f4f4f4;
+    text-align: center;
+}
+
+.combo-section {
+    padding: 20px;
+    text-align: center;
+}
+
+.combo-list {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.combo-card {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
+    width: 200px;
+    text-align: center;
+}
+
+.combo-card img {
+    width: 100px;
+    height: auto;
+}
+
+.combo-card button {
+    margin-top: 10px;
+    background: #ccc;
+    border: none;
+    border-radius: 50%;
+    padding: 5px 10px;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+.fnb-section {
+    padding: 2rem;
+    margin: 2rem auto;
+    max-width: 1200px;
+}
+
+.section-title {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+    color: #333;
+}
+
+.combo-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.combo-card {
+    background: white;
+    border-radius: 12px;
+    padding: 1rem;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+}
+
+.combo-image {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.combo-info {
+    padding: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.price {
+    font-weight: bold;
+    color: #e63946;
+}
+
+.add-button {
+    background: #2a9d8f;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+
+.add-button:hover {
+    transform: scale(1.1);
+}
+
+.footer {
+    background: #00245a;
+    color: white;
+    padding: 20px;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.footer ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer li {
+    margin: 5px 0;
+}
+
+.footer-bottom {
+    text-align: center;
+    width: 100%;
+    margin-top: 10px;
+    font-size: 12px;
+}

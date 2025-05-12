@@ -6,6 +6,10 @@ import SignUpPage from "./register";
 import HomePage from "./home";
 import Loading from "./loading/loading";
 import MoviePage from "./movies";
+import CinemaPage from "./cinema";
+import FoodPage from "./food";
+import PaymentPage from "./payment";
+import PaymentSuccess from "./succespay";
 
 function App() {
   const [isLoading, setIsloading] = useState(true);
@@ -20,7 +24,7 @@ function App() {
 
     const timer = setTimeout(() => {
       setIsloading(false);
-    }, 2000); // Simulate a loading time of 3 second
+    }, 1000); // Simulate a loading time of 3 second
 
     return () => clearTimeout(timer); // Cleanup the timer on component unmount
   }, []);
@@ -35,6 +39,10 @@ function App() {
       <Route path="/register" element={<SignUpPage />} />
       <Route path="/home" element={<HomePage />} />
       <Route path="/movies" element={<MoviePage />} />
+      <Route path="/cinema" element={<CinemaPage />} />
+      <Route path="/food" element={<FoodPage />} />
+      <Route path="/payment" element={<PaymentPage />} />
+      <Route path="/succespay" element={<PaymentSuccess />} />
       <Route path="*" element={<div>404 Not Found</div>} />
     </Routes>
   );

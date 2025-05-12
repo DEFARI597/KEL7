@@ -3,6 +3,7 @@ const jwt = require("jsonwebtoken");
 const bcrypt = require("bcryptjs");
 const cors = require("cors");
 const mysql = require("mysql2");
+const bodyParser = require("body-parser");
 
 const db = mysql.createConnection({
   host: "localhost",
@@ -15,6 +16,7 @@ const app = express();
 const PORT = 5000;
 app.use(cors());
 app.use(express.json());
+app.use(bodyParser.json());
 
 const JWT_SECRET =
   "a6dbaefd3ca22401e2dd9e187c877f94f098a2748d3e4d6b99235efbad733322"; // Ganti dengan kunci rahasia Anda
@@ -138,6 +140,46 @@ app.delete("/login/:id", (req, res) => {
     if (err) return res.json(err);
     return res.json("User deleted successfully!");
   });
+});
+
+//express for tables pemesanan
+app.get("/order", (req, res) => {
+  db.query("SELECT * FROM pemesanan", (err, result) => {
+    if (err) return res.json(err);
+    return res.json(result);
+  });
+});
+
+//post pemesanan tiket
+app.post("/order", (req, res) => {
+  const { username, email, no_hp } = req.body;
+
+  // Input validation
+  if (!username || !email || !no_hp) {
+    return res.status(400).json({
+      success: false,
+      message: "Username, email, and no hp are required fields",
+    });
+  }
+
+  db.query(
+    "INSERT INTO pemesanan (username, email, no_hp, tgl_beli) VALUES (?, ?, ?, NOW())",
+    [username, email, no_hp],
+    (err, result) => {
+      if (err) {
+        console.error("Database error:", err);
+        return res.status(500).json({
+          success: false,
+          message: "Error creating order",
+          error: err.message,
+        });
+      }
+      return res.status(201).json({
+        success: true,
+        message: "Order created successfully!",
+      });
+    }
+  );
 });
 
 app.listen(PORT, () => {

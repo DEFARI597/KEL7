@@ -85,6 +85,42 @@ body {
   cursor: pointer;
 }
 
+.movies {
+  font-weight: 600;
+  margin-right: 1rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.search-box1 {
+  display: flex;
+  align-items: center;
+  background: white;
+  padding: 0.25rem 0.5rem;
+  border-radius: 7px;
+  width: 450px;
+  margin: 0 1rem;
+}
+
+.search-box1 input {
+  flex: 1;
+  border: none;
+  outline: none;
+  padding: 0.25rem;
+  font-size: 0.9rem;
+}
+
+.search-box1 button {
+  background: transparent;
+  max-width: 120px;
+  width: 100px;
+  border: none;
+  color: #666;
+  padding: 0.25rem;
+  cursor: pointer;
+}
+
 .join-btn {
   background-color: transparent;
   border: 1px solid white;
@@ -106,10 +142,10 @@ body {
 
 .search-container {
   display: flex;
-  justify-content: center;
   margin-top: -2rem;
   position: relative;
   z-index: 2;
+  transform: translateX(150px);
 }
 
 .search-box {
@@ -117,8 +153,10 @@ body {
   align-items: center;
   background: white;
   padding: 0.25rem 0.5rem;
-  border-radius: 4px;
-  width: 300px;
+  border: none;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+  border-radius: 50px;
+  width: 750px;
   margin: 0 1rem;
 }
 
@@ -132,10 +170,13 @@ body {
 
 .search-box button {
   background: transparent;
+  max-width: 120px;
+  width: 100px;
   border: none;
   color: #666;
   padding: 0.25rem;
   cursor: pointer;
+  transform: translateX(10px);
 }
 
 .location-selector i {
@@ -265,13 +306,14 @@ body {
 .carousel {
   display: flex;
   align-items: center;
-  justify-content: flex-start;
+  justify-content: space-around;
   gap: 1rem;
   overflow-y: hidden;
   overflow-x: auto;
   padding: 1rem;
   scroll-snap-type: x mandatory;
   -webkit-overflow-scrolling: touch;
+  cursor: pointer;
 }
 
 .carousel::-webkit-scrollbar {
@@ -298,6 +340,11 @@ body {
   object-fit: cover;
   border-radius: 8px;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.carousel img:hover {
+  transform: scale(1.1);
+  transition: transform 0.3s ease;
 }
 
 .theater-preview {

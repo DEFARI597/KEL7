@@ -1,0 +1,115 @@
+.payment-success-page {
+    font-family: Arial, sans-serif;
+    color: #000;
+}
+
+.navbar {
+    background: #002a5c;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 20px;
+}
+
+.navbar-left nav a {
+    color: white;
+    margin: 0 10px;
+    text-decoration: none;
+}
+
+.navbar-right {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.join-btn {
+    background-color: #1a4fb3;
+    color: white;
+    padding: 5px 10px;
+    border: none;
+}
+
+.main-content {
+    display: flex;
+    padding: 20px;
+}
+
+.left {
+    width: 50%;
+    padding: 20px;
+    border-right: 1px solid #ccc;
+}
+
+.left hr {
+    margin: 10px 0 20px;
+}
+
+.left p {
+    margin-bottom: 20px;
+}
+
+.barcode {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.barcode img {
+    height: 100px;
+}
+
+.barcode-text {
+    color: #1a4fb3;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.right {
+    width: 50%;
+    background-color: #081c3c;
+    color: white;
+    padding: 20px;
+}
+
+.order-info p {
+    margin-bottom: 20px;
+}
+
+.summary-item {
+    margin-bottom: 20px;
+}
+
+.summary-item p {
+    display: flex;
+    justify-content: space-between;
+    margin: 0;
+}
+
+.total {
+    font-weight: bold;
+    font-size: 18px;
+    display: flex;
+    justify-content: space-between;
+}
+
+footer {
+    background: #002a5c;
+    color: white;
+    display: flex;
+    justify-content: space-around;
+    padding: 20px;
+    flex-wrap: wrap;
+}
+
+footer div a {
+    display: block;
+    margin: 5px 0;
+    color: white;
+    text-decoration: none;
+}
+
+.footer-bottom {
+    width: 100%;
+    text-align: center;
+    margin-top: 10px;
+}
